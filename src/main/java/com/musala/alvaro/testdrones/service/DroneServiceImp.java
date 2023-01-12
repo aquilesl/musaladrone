@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DroneServiceImp implements IDroneService {
 
-	private final DroneRepository droneRepo;
+	private DroneRepository droneRepo;
 	
 	@Autowired
 	public DroneServiceImp(DroneRepository droneRepo) {

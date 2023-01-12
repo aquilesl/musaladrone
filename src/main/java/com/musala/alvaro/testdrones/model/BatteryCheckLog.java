@@ -20,9 +20,8 @@ public class BatteryCheckLog {
     @Column(name = "batteryLevel")
     private int batteryLevel;
 
-	public BatteryCheckLog(long id, Drone drone, Date checkTime, int batteryLevel) {
+	public BatteryCheckLog(Drone drone, Date checkTime, int batteryLevel) {
 		super();
-		this.id = id;
 		this.drone = drone;
 		this.checkDateTime = checkTime;
 		this.batteryLevel = batteryLevel;

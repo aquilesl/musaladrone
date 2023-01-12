@@ -22,9 +22,8 @@ public class Medication {
     @Column(name = "image")
     private String image;
 
-	public Medication(long id, String name, double weight, String code, String image) {
+	public Medication(String name, double weight, String code, String image) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.weight = weight;
 		this.code = code;

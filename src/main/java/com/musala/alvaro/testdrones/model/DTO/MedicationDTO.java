@@ -20,9 +20,8 @@ public class MedicationDTO {
 	private String code;
 	private String image;
 	
-	public MedicationDTO(long id, String name, double weight, String code, String image) {
+	public MedicationDTO(String name, double weight, String code, String image) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.weight = weight;
 		this.code = code;

@@ -10,13 +10,14 @@ public class BatteryCheckLogDTO {
 	private Drone drone;
 	private Date checkDateTime;
 	private int batteryLevel;
-	public BatteryCheckLogDTO(long id, Drone drone, Date checkDateTime, int batteryLevel) {
+	
+	public BatteryCheckLogDTO(Drone drone, Date checkDateTime, int batteryLevel) {
 		super();
-		this.id = id;
 		this.drone = drone;
 		this.checkDateTime = checkDateTime;
 		this.batteryLevel = batteryLevel;
 	}
+	
 	public BatteryCheckLogDTO() {
 		super();
 	}

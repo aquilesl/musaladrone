@@ -8,7 +8,7 @@ import com.musala.alvaro.testdrones.repository.OrderRepository;
 
 public class OrderServiceImp implements IOrderService {
 
-	private final OrderRepository orderRepo;
+	private OrderRepository orderRepo;
 	
 	@Autowired
 	public OrderServiceImp(OrderRepository orderRepo) {

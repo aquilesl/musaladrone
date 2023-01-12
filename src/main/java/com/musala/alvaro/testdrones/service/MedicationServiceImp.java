@@ -11,7 +11,7 @@ import com.musala.alvaro.testdrones.repository.MedicationRepository;
 @Service
 public class MedicationServiceImp implements IMedicationService {
 	
-	private final MedicationRepository medRepo;
+	private MedicationRepository medRepo;
 
 	@Autowired
 	public MedicationServiceImp(MedicationRepository medRepo) {

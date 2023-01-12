@@ -10,7 +10,7 @@ import com.musala.alvaro.testdrones.repository.BatteryCheckLogRepository;
 @Service
 public class BatteryCheckLogServiceImp implements IBatteryCheckLogService {
 
-	private final BatteryCheckLogRepository battRepo;
+	private BatteryCheckLogRepository battRepo;
 	
 	@Autowired
 	public BatteryCheckLogServiceImp(BatteryCheckLogRepository battRepo) {

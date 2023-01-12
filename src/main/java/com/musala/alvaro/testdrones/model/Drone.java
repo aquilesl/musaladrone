@@ -29,10 +29,9 @@ public class Drone {
     @Column(name = "state")
     private DroneState state;
 
-	public Drone(long id, String serialNumber, DroneModel model, double weightLimit, int batteryCapacity,
+	public Drone(String serialNumber, DroneModel model, double weightLimit, int batteryCapacity,
 			DroneState state) {
 		super();
-		this.id = id;
 		this.serialNumber = serialNumber;
 		this.model = model;
 		this.weightLimit = weightLimit;

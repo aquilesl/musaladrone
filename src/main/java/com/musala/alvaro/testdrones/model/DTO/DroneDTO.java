@@ -35,16 +35,17 @@ public class DroneDTO {
 	private int batteryCapacity;
 	
 	private DroneState state;
-	public DroneDTO(long id, String serialNumber, DroneModel model, double weightLimit, int batteryCapacity,
+	
+	public DroneDTO(String serialNumber, DroneModel model, double weightLimit, int batteryCapacity,
 			DroneState state) {
 		super();
-		this.id = id;
 		this.serialNumber = serialNumber;
 		this.model = model;
 		this.weightLimit = weightLimit;
 		this.batteryCapacity = batteryCapacity;
 		this.state = state;
 	}
+	
 	public DroneDTO() {
 		super();
 	}

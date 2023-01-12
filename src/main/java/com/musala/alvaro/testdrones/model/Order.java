@@ -17,9 +17,8 @@ public class Order {
     @ManyToMany
     private Set<Medication> medications;
 
-	public Order(long id, Drone drone, Set<Medication> medications) {
+	public Order(Drone drone, Set<Medication> medications) {
 		super();
-		this.id = id;
 		this.drone = drone;
 		this.medications = medications;
 	}
