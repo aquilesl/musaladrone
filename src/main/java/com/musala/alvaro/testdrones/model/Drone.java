@@ -1,7 +1,6 @@
 package com.musala.alvaro.testdrones.model;
 
 import javax.persistence.*;
-
 import com.musala.alvaro.testdrones.model.enums.DroneModel;
 import com.musala.alvaro.testdrones.model.enums.DroneState;
 

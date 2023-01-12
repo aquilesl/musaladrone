@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class TestdronesApplication {
+public class DronesApplication {
 
 	@Bean
 	public ModelMapper modelMapper() {
@@ -14,7 +14,7 @@ public class TestdronesApplication {
 	}
 	
 	public static void main(String[] args) {
-		SpringApplication.run(TestdronesApplication.class, args);
+		SpringApplication.run(DronesApplication.class, args);
 	}
 
 }

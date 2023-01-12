@@ -2,6 +2,8 @@ package com.musala.alvaro.testdrones.model;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "medication")
 public class Medication {
 
 	@Id
@@ -31,6 +33,46 @@ public class Medication {
 
 	public Medication() {
 		super();
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	@Override

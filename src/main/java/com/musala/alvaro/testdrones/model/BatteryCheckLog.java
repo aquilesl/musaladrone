@@ -3,7 +3,9 @@ package com.musala.alvaro.testdrones.model;
 import javax.persistence.*;
 import java.util.Date;
 
-public class BatteryCheck {
+@Entity
+@Table(name = "batterychecklog")
+public class BatteryCheckLog {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +20,7 @@ public class BatteryCheck {
     @Column(name = "batteryLevel")
     private int batteryLevel;
 
-	public BatteryCheck(long id, Drone drone, Date checkTime, int batteryLevel) {
+	public BatteryCheckLog(long id, Drone drone, Date checkTime, int batteryLevel) {
 		super();
 		this.id = id;
 		this.drone = drone;
@@ -26,7 +28,7 @@ public class BatteryCheck {
 		this.batteryLevel = batteryLevel;
 	}
 
-	public BatteryCheck() {
+	public BatteryCheckLog() {
 		super();
 	}
 
@@ -64,10 +66,9 @@ public class BatteryCheck {
 
 	@Override
 	public String toString() {
-		return "BatteryCheck [id=" + id + ", drone=" + drone + ", checkDateTime=" + checkDateTime + ", batteryLevel="
+		return "BatteryCheckLog [id=" + id + ", drone=" + drone + ", checkDateTime=" + checkDateTime + ", batteryLevel="
 				+ batteryLevel + "]";
 	}
-    
-    
+
 
 }

@@ -1,10 +1,22 @@
 package com.musala.alvaro.testdrones.model.DTO;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 public class MedicationDTO {
 
 	private long id;
+	
+	@Pattern(regexp = "^[a-zA-Z0-9-_]*$", message = "The medicine name only allows letters, numbers and special characters '-' and '_'")
+    @NotBlank(message = "Medicine name is required")
 	private String name;
+	
+	@NotNull(message = "Weight is required")
 	private double weight;
+	
+	@Pattern(regexp = "^[A-Z0-9_]*$", message = "The medicine code only allows uppercase letters, numbers and special character '_'")
+    @NotBlank(message = "Code is required")
 	private String code;
 	private String image;
 	
