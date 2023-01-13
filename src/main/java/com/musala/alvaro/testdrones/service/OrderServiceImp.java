@@ -3,9 +3,13 @@ package com.musala.alvaro.testdrones.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.musala.alvaro.testdrones.model.Order;
+import com.musala.alvaro.testdrones.model.enums.DroneState;
 import com.musala.alvaro.testdrones.repository.OrderRepository;
 
+@Service
 public class OrderServiceImp implements IOrderService {
 
 	private OrderRepository orderRepo;
@@ -42,6 +46,11 @@ public class OrderServiceImp implements IOrderService {
 	@Override
 	public void deleteOrder(long id) {
 		orderRepo.deleteById(id);
+	}
+
+	@Override
+	public Order findFirstByDroneIdAndDroneState(long droneId, DroneState state) {
+		return orderRepo.findFirstByDroneIdAndDroneState(droneId, state);
 	}
 
 }

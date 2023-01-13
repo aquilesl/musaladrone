@@ -14,11 +14,10 @@ public class Order {
     @ManyToOne
     private Drone drone;
 
-    @ManyToMany
+    @OneToMany
     private Set<Medication> medications;
 
 	public Order(Drone drone, Set<Medication> medications) {
-		super();
 		this.drone = drone;
 		this.medications = medications;
 	}

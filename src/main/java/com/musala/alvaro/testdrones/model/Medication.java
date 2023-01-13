@@ -23,7 +23,6 @@ public class Medication {
     private String image;
 
 	public Medication(String name, double weight, String code, String image) {
-		super();
 		this.name = name;
 		this.weight = weight;
 		this.code = code;

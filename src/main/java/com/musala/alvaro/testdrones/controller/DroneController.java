@@ -37,12 +37,11 @@ public class DroneController {
 
 	@Autowired
 	public DroneController(IDroneService droneService, ModelMapper modelMapper) {
-		super();
 		this.droneService = droneService;
 		this.modelMapper = modelMapper;
 	}
 
-	@GetMapping
+	@GetMapping("/")
 	public ResponseEntity<List<DroneDTO>> getAllDrones() {
 		try {
 
@@ -69,7 +68,7 @@ public class DroneController {
     }
 	
 	
-	@PostMapping
+	@PostMapping("/")
     public ResponseEntity<DroneDTO> addDrone(@Valid @RequestBody DroneDTO drone) {
         try {
 

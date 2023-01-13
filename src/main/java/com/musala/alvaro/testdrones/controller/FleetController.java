@@ -4,13 +4,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import javax.validation.Valid;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +37,6 @@ public class FleetController {
 	
 	@Autowired
 	public FleetController(IDroneService droneService, ModelMapper modelMapper, IOrderService orderService) {
-		super();
 		this.droneService = droneService;
 		this.modelMapper = modelMapper;
 		this.orderService = orderService;
@@ -62,7 +61,7 @@ public class FleetController {
 	
 //	- loading a drone with medication items;
 	
-	@PostMapping("/register-order")
+	@PostMapping("/load-drone")
     public ResponseEntity<String> registerOrder(@Valid @RequestBody OrderDTO order) {
 		
 		try {
@@ -126,10 +125,46 @@ public class FleetController {
 		
 	}
 	
-//	- checking loaded medication items for a given drone; 
+//	- checking loaded medication items for a given drone;
+	
+	@GetMapping("/drone-cargo/{id}")
+    public ResponseEntity<OrderDTO> showCargo(@PathVariable("id") long droneId){
+		Order order = orderService.findFirstByDroneIdAndDroneState(droneId, DroneState.Loaded);
+		
+		if(order == null) {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+
+		OrderDTO cargo = modelMapper.map(order, OrderDTO.class);
+		return new ResponseEntity<>(cargo, HttpStatus.OK);
+	}
+	
 //	- checking available drones for loading;
+	
+	@GetMapping("/available-drones")
+	public ResponseEntity<List<DroneDTO>> getAvailableDrones(){
+		List<Drone> drones = droneService.findByState(DroneState.Idle);
+		
+		if(drones.isEmpty()) {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+		
+		List<DroneDTO> dronesdto = drones.stream()
+				.map(drone -> modelMapper.map(drone, DroneDTO.class))
+				.collect(Collectors.toList());
+		return new ResponseEntity<>(dronesdto, HttpStatus.OK);
+	}
+	
 //	- check drone battery level for a given drone;
 
-	
+	@GetMapping("/drone-battery-level/{id}")
+	public ResponseEntity<Integer> getCheckBatteryLevel(@PathVariable("id") long droneId){
+		Optional<Drone> drone = Optional.ofNullable(droneService.getDroneById(droneId));
+        if (drone.isPresent()) {
+            return new ResponseEntity<>(drone.get().getBatteryCapacity(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+	}
 
 }

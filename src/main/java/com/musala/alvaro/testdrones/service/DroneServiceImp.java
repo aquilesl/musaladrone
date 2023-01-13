@@ -2,6 +2,7 @@ package com.musala.alvaro.testdrones.service;
 
 import java.util.List;
 import com.musala.alvaro.testdrones.model.Drone;
+import com.musala.alvaro.testdrones.model.enums.DroneState;
 import com.musala.alvaro.testdrones.repository.DroneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +48,11 @@ public class DroneServiceImp implements IDroneService {
 	@Override
 	public void deleteDrone(long id) {
 		droneRepo.deleteById(id);
+	}
+
+	@Override
+	public List<Drone> findByState(DroneState state) {
+		return droneRepo.findByState(state);
 	}
 
 }
