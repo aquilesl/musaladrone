@@ -60,7 +60,7 @@ public class DronesApplication {
 		droneservice.createDrone(d5);
 		Drone d6 = new Drone("666AAA", DroneModel.HeavyWeight,500, 100, DroneState.Idle);
 		droneservice.createDrone(d6);
-		Drone d7 = new Drone("777AAA", DroneModel.HeavyWeight,500, 100, DroneState.Idle);
+		Drone d7 = new Drone("777AAA", DroneModel.HeavyWeight,500, 20, DroneState.Idle);
 		droneservice.createDrone(d7);
 		
 		//adding medication to database...
