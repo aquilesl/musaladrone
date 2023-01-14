@@ -19,10 +19,12 @@ import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.model.GlobalConstant;
 import com.musala.alvaro.testdrones.model.Medication;
 import com.musala.alvaro.testdrones.model.Order;
+import com.musala.alvaro.testdrones.model.DTO.BatteryCheckLogDTO;
 import com.musala.alvaro.testdrones.model.DTO.DroneDTO;
 import com.musala.alvaro.testdrones.model.DTO.MedicationDTO;
 import com.musala.alvaro.testdrones.model.DTO.OrderDTO;
 import com.musala.alvaro.testdrones.model.enums.DroneState;
+import com.musala.alvaro.testdrones.service.IBatteryCheckLogService;
 import com.musala.alvaro.testdrones.service.IDroneService;
 import com.musala.alvaro.testdrones.service.IOrderService;
 
@@ -33,13 +35,16 @@ public class FleetController {
 	private IDroneService droneService;
 	private IOrderService orderService;
 	private ModelMapper modelMapper;
+	private IBatteryCheckLogService battService;
 	
 	
 	@Autowired
-	public FleetController(IDroneService droneService, ModelMapper modelMapper, IOrderService orderService) {
+	public FleetController(IDroneService droneService, ModelMapper modelMapper, 
+			IOrderService orderService, IBatteryCheckLogService battService) {
 		this.droneService = droneService;
 		this.modelMapper = modelMapper;
 		this.orderService = orderService;
+		this.battService = battService;
 	}
 
 
@@ -165,6 +170,25 @@ public class FleetController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+	}
+	
+	@GetMapping("battery-check-log")
+	public ResponseEntity<List<BatteryCheckLogDTO>> getBatteryCheckLog(){
+		
+		try {
+
+			List<BatteryCheckLogDTO> log =  battService.getAllBatteryCheckLog().stream()
+					.map(logTemp -> modelMapper.map(logTemp, BatteryCheckLogDTO.class))
+					.collect(Collectors.toList());
+
+            if (log.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(log, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+		
 	}
 
 }

@@ -32,7 +32,7 @@ public class BatteryCheckScheduled {
 		this.droneService = droneService;
 	}
 
-	@Scheduled(cron = "0 */5 * ? * *")
+	@Scheduled(cron = "*/10 * * * * *")
     public void scheduleTaskDroneBatteryLevels() {
 		Date date = new Date();
         logger.info("Starting Battery Levels check at - {}", dateTimeFormatter.format(LocalDateTime.now()));
