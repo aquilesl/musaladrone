@@ -37,7 +37,6 @@ private IMedicationService medicService;
 
 	@Autowired
 	public MedicationController(IMedicationService medicService, ModelMapper modelMapper) {
-		super();
 		this.medicService = medicService;
 		this.modelMapper = modelMapper;
 	}

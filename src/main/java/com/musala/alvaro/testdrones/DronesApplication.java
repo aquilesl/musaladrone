@@ -94,6 +94,8 @@ public class DronesApplication {
 		Order o3 = new Order(d3, cargo3);
 		orderservice.createOrder(o3);
 		
+		System.out.println("DATABASE DATA LOADED!!!");
+		
 	}
 	
 }

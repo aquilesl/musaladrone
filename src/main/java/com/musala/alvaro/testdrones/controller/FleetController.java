@@ -164,9 +164,9 @@ public class FleetController {
 
 	@GetMapping("/drone-battery-level/{id}")
 	public ResponseEntity<Integer> getCheckBatteryLevel(@PathVariable("id") long droneId){
-		Optional<Drone> drone = Optional.ofNullable(droneService.getDroneById(droneId));
-        if (drone.isPresent()) {
-            return new ResponseEntity<>(drone.get().getBatteryCapacity(), HttpStatus.OK);
+		Drone drone = droneService.getDroneById(droneId);
+        if (drone != null) {
+            return new ResponseEntity<>(drone.getBatteryCapacity(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

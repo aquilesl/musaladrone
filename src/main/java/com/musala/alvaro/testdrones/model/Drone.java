@@ -31,7 +31,6 @@ public class Drone {
 
 	public Drone(String serialNumber, DroneModel model, double weightLimit, int batteryCapacity,
 			DroneState state) {
-		super();
 		this.serialNumber = serialNumber;
 		this.model = model;
 		this.weightLimit = weightLimit;
@@ -40,7 +39,6 @@ public class Drone {
 	}
 	
 	public Drone() {
-		super();
 	}
 
 	public long getId() {
@@ -95,6 +93,48 @@ public class Drone {
 	public String toString() {
 		return "Drone [id=" + id + ", serialNumber=" + serialNumber + ", model=" + model + ", weightLimit="
 				+ weightLimit + ", batteryCapacity=" + batteryCapacity + ", state=" + state + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + batteryCapacity;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + ((serialNumber == null) ? 0 : serialNumber.hashCode());
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(weightLimit);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Drone other = (Drone) obj;
+		if (batteryCapacity != other.batteryCapacity)
+			return false;
+		if (id != other.id)
+			return false;
+		if (model != other.model)
+			return false;
+		if (serialNumber == null) {
+			if (other.serialNumber != null)
+				return false;
+		} else if (!serialNumber.equals(other.serialNumber))
+			return false;
+		if (state != other.state)
+			return false;
+		if (Double.doubleToLongBits(weightLimit) != Double.doubleToLongBits(other.weightLimit))
+			return false;
+		return true;
 	}
 
 

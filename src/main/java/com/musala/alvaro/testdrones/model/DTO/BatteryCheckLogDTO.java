@@ -2,24 +2,21 @@ package com.musala.alvaro.testdrones.model.DTO;
 
 import java.util.Date;
 
-import com.musala.alvaro.testdrones.model.Drone;
 
 public class BatteryCheckLogDTO {
 
 	private long id;
-	private Drone drone;
+	private DroneDTO drone;
 	private Date checkDateTime;
 	private int batteryLevel;
 	
-	public BatteryCheckLogDTO(Drone drone, Date checkDateTime, int batteryLevel) {
-		super();
+	public BatteryCheckLogDTO(DroneDTO drone, Date checkDateTime, int batteryLevel) {
 		this.drone = drone;
 		this.checkDateTime = checkDateTime;
 		this.batteryLevel = batteryLevel;
 	}
 	
 	public BatteryCheckLogDTO() {
-		super();
 	}
 	public long getId() {
 		return id;
@@ -27,10 +24,10 @@ public class BatteryCheckLogDTO {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Drone getDrone() {
+	public DroneDTO getDrone() {
 		return drone;
 	}
-	public void setDrone(Drone drone) {
+	public void setDrone(DroneDTO drone) {
 		this.drone = drone;
 	}
 	public Date getCheckDateTime() {
@@ -45,11 +42,50 @@ public class BatteryCheckLogDTO {
 	public void setBatteryLevel(int batteryLevel) {
 		this.batteryLevel = batteryLevel;
 	}
+
 	@Override
 	public String toString() {
 		return "BatteryCheckLogDTO [id=" + id + ", drone=" + drone + ", checkDateTime=" + checkDateTime
 				+ ", batteryLevel=" + batteryLevel + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + batteryLevel;
+		result = prime * result + ((checkDateTime == null) ? 0 : checkDateTime.hashCode());
+		result = prime * result + ((drone == null) ? 0 : drone.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BatteryCheckLogDTO other = (BatteryCheckLogDTO) obj;
+		if (batteryLevel != other.batteryLevel)
+			return false;
+		if (checkDateTime == null) {
+			if (other.checkDateTime != null)
+				return false;
+		} else if (!checkDateTime.equals(other.checkDateTime))
+			return false;
+		if (drone == null) {
+			if (other.drone != null)
+				return false;
+		} else if (!drone.equals(other.drone))
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
 
 	
 }

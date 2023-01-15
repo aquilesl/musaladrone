@@ -14,7 +14,7 @@ public class Order {
     @ManyToOne
     private Drone drone;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Medication> medications;
 
 	public Order(Drone drone, Set<Medication> medications) {
@@ -23,7 +23,6 @@ public class Order {
 	}
 
 	public Order() {
-		super();
 	}
 
 	public long getId() {
@@ -53,6 +52,40 @@ public class Order {
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", drone=" + drone + ", medications=" + medications + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((drone == null) ? 0 : drone.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((medications == null) ? 0 : medications.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		if (drone == null) {
+			if (other.drone != null)
+				return false;
+		} else if (!drone.equals(other.drone))
+			return false;
+		if (id != other.id)
+			return false;
+		if (medications == null) {
+			if (other.medications != null)
+				return false;
+		} else if (!medications.equals(other.medications))
+			return false;
+		return true;
 	}
 
 	

@@ -1,17 +1,14 @@
 package com.musala.alvaro.testdrones.scheduledtask;
 
-import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
 import com.musala.alvaro.testdrones.model.BatteryCheckLog;
 import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.service.IBatteryCheckLogService;
 import com.musala.alvaro.testdrones.service.IDroneService;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
