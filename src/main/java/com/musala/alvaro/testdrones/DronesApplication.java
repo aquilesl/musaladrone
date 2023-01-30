@@ -3,7 +3,6 @@ package com.musala.alvaro.testdrones;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -11,7 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.model.Medication;
 import com.musala.alvaro.testdrones.model.Order;
@@ -21,7 +19,7 @@ import com.musala.alvaro.testdrones.service.IDroneService;
 import com.musala.alvaro.testdrones.service.IMedicationService;
 import com.musala.alvaro.testdrones.service.IOrderService;
 
-@EnableWebMvc
+//@EnableWebMvc
 @EnableScheduling
 @SpringBootApplication
 public class DronesApplication {
@@ -94,7 +92,7 @@ public class DronesApplication {
 		Order o3 = new Order(d3, cargo3);
 		orderservice.createOrder(o3);
 		
-		System.out.println("DATABASE DATA LOADED!!!");
+		System.out.println("DATABASE LOADED!!!");
 		
 	}
 	

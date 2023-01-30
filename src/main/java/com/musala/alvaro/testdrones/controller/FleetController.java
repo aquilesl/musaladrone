@@ -1,7 +1,6 @@
 package com.musala.alvaro.testdrones.controller;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
@@ -15,6 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.musala.alvaro.testdrones.exceptions.LowBatteryException;
+import com.musala.alvaro.testdrones.exceptions.NoMedicineToLoadException;
+import com.musala.alvaro.testdrones.exceptions.NotAvailableDroneException;
+import com.musala.alvaro.testdrones.exceptions.WeightLimitException;
 import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.model.GlobalConstant;
 import com.musala.alvaro.testdrones.model.Medication;
@@ -53,37 +56,29 @@ public class FleetController {
 	
 	@PostMapping("/register-drone")
     public ResponseEntity<DroneDTO> registerDrone(@Valid @RequestBody DroneDTO drone) {
-		try {
 
             Drone droneRequest = modelMapper.map(drone, Drone.class); 
             droneRequest.setState(DroneState.Idle);
             Drone newDrone = droneService.createDrone(droneRequest);
             return new ResponseEntity<>(modelMapper.map(newDrone, DroneDTO.class), HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+
     }
 	
 //	- loading a drone with medication items;
 	
 	@PostMapping("/load-drone")
-    public ResponseEntity<String> registerOrder(@Valid @RequestBody OrderDTO order) {
+    public ResponseEntity<String> registerOrder(@Valid @RequestBody OrderDTO order) throws NotAvailableDroneException, LowBatteryException, NoMedicineToLoadException, WeightLimitException {
 		
-		try {
 			
 			Drone drone = droneService.getDroneById(order.getDrone().getId());
 			Set<MedicationDTO> medications = order.getMedications();
 				
 			if(drone.getState() != DroneState.Idle) {
-				return new ResponseEntity<>(
-                        "The drone it's not available.",
-                        HttpStatus.BAD_REQUEST);
+				throw new NotAvailableDroneException();
 			}
 			
 			if(drone.getBatteryCapacity() < GlobalConstant.MIN_WARNING_LEVEL_BATTERY) {
-				return new ResponseEntity<>(
-                        "The drone has a low battery.",
-                        HttpStatus.BAD_REQUEST);
+				throw new LowBatteryException();
 			}
 			
 			drone.setState(DroneState.Loading);
@@ -97,9 +92,7 @@ public class FleetController {
 				drone.setState(DroneState.Idle);
 				drone = droneService.updateDrone(drone.getId(), drone);
 				
-				return new ResponseEntity<>(
-                        "The is no medicine to be loaded.",
-                        HttpStatus.BAD_REQUEST);
+				throw new NoMedicineToLoadException();
 			}
 			
 			double weight = 0;
@@ -112,9 +105,7 @@ public class FleetController {
 				drone.setState(DroneState.Idle);
 				drone = droneService.updateDrone(drone.getId(), drone);
 				
-				return new ResponseEntity<>(
-                        "The medicines weight it's over the limit.",
-                        HttpStatus.BAD_REQUEST);
+				throw new WeightLimitException();
 			}
 			
 			drone.setState(DroneState.Loaded);
@@ -122,10 +113,6 @@ public class FleetController {
 			orderService.createOrder(tempOrder);
 			
 			return new ResponseEntity<>("The drone has been loaded.", HttpStatus.OK);
-			
-		}catch(Exception e) {
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
 		
 		
 	}
@@ -134,12 +121,8 @@ public class FleetController {
 	
 	@GetMapping("/drone-cargo/{id}")
     public ResponseEntity<OrderDTO> showCargo(@PathVariable("id") long droneId){
-		Order order = orderService.findFirstByDroneIdAndDroneState(droneId, DroneState.Loaded);
 		
-		if(order == null) {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		}
-
+		Order order = orderService.findFirstByDroneIdAndDroneState(droneId, DroneState.Loaded);
 		OrderDTO cargo = modelMapper.map(order, OrderDTO.class);
 		return new ResponseEntity<>(cargo, HttpStatus.OK);
 	}
@@ -164,18 +147,14 @@ public class FleetController {
 
 	@GetMapping("/drone-battery-level/{id}")
 	public ResponseEntity<Integer> getCheckBatteryLevel(@PathVariable("id") long droneId){
+		
 		Drone drone = droneService.getDroneById(droneId);
-        if (drone != null) {
-            return new ResponseEntity<>(drone.getBatteryCapacity(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(drone.getBatteryCapacity(), HttpStatus.OK);
+        
 	}
 	
 	@GetMapping("battery-check-log")
 	public ResponseEntity<List<BatteryCheckLogDTO>> getBatteryCheckLog(){
-		
-		try {
 
 			List<BatteryCheckLogDTO> log =  battService.getAllBatteryCheckLog().stream()
 					.map(logTemp -> modelMapper.map(logTemp, BatteryCheckLogDTO.class))
@@ -185,9 +164,6 @@ public class FleetController {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
             return new ResponseEntity<>(log, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
 		
 	}
 
