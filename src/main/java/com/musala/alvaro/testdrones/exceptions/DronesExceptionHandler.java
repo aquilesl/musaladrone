@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
@@ -81,13 +82,35 @@ public class DronesExceptionHandler {
         HttpStatus.BAD_REQUEST);
     }
 	
+	@ExceptionHandler(RoleNotFoundException.class)
+    public ResponseEntity<?> RoleNotFoundHandling(Exception exception, WebRequest request) {
+		return new ResponseEntity<>(
+        		new ExceptionDetail(new Date(), 
+        		HttpStatus.BAD_REQUEST.toString(),
+        		"Role is not found.",
+        		"code#7",
+        		exception.getMessage() ), 
+        HttpStatus.BAD_REQUEST);
+    }
+	
+	@ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<?> JwtBadCredentialsHandling(Exception exception, WebRequest request) {
+		return new ResponseEntity<>(
+        		new ExceptionDetail(new Date(), 
+        		HttpStatus.BAD_REQUEST.toString(),
+        		"Bad credentials.",
+        		"code#8",
+        		exception.getMessage() ), 
+        HttpStatus.BAD_REQUEST);
+    }
+	
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> UnknowExceptionHandling(Exception exception, WebRequest request) {
         return new ResponseEntity<>(
         		new ExceptionDetail(new Date(), 
         		HttpStatus.INTERNAL_SERVER_ERROR.toString(),
-        		"Unknow error sorry :(.",
-        		"code#7",
+        		"Unknow INTERNAL_SERVER_ERROR sorry :(.",
+        		"code#9",
         		exception.getMessage() ), 
         HttpStatus.INTERNAL_SERVER_ERROR);
     }

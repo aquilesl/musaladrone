@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,13 +14,17 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.model.Medication;
 import com.musala.alvaro.testdrones.model.Order;
+import com.musala.alvaro.testdrones.model.Role;
+import com.musala.alvaro.testdrones.model.User;
 import com.musala.alvaro.testdrones.model.enums.DroneModel;
 import com.musala.alvaro.testdrones.model.enums.DroneState;
+import com.musala.alvaro.testdrones.model.enums.RoleType;
 import com.musala.alvaro.testdrones.service.IDroneService;
 import com.musala.alvaro.testdrones.service.IMedicationService;
 import com.musala.alvaro.testdrones.service.IOrderService;
+import com.musala.alvaro.testdrones.service.IRoleService;
+import com.musala.alvaro.testdrones.service.IUserService;
 
-//@EnableWebMvc
 @EnableScheduling
 @SpringBootApplication
 public class DronesApplication {
@@ -32,17 +37,29 @@ public class DronesApplication {
 	@Bean
 	ApplicationRunner pupulateDataBase(IDroneService droneservice,
 						   IMedicationService medicationservice,
-						   IOrderService orderService) {
-		return (ApplicationArguments args) ->  load(droneservice, medicationservice, orderService);
+						   IOrderService orderService,
+						   IUserService userService,
+						   IRoleService roleService) {
+		return (ApplicationArguments args) ->  load(droneservice, medicationservice, orderService, userService, roleService);
 	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(DronesApplication.class, args);
 	}
 
+
 	public void load(IDroneService droneservice,
 			   IMedicationService medicationservice,
-			   IOrderService orderservice){
+			   IOrderService orderservice,IUserService userService,
+			   IRoleService roleService){
+		
+		//Adding default admin user
+		User adminUser = new User("admin","admin@gmail.com","$2a$10$yDbBp0aVZC/2WoCMkfcj3e/a42s.RWRflE5yoHLQaUUm0DT/mm/yO");
+		Role role = new Role(RoleType.ROLE_ADMIN);
+		Role temp = roleService.createRole(role);
+		Set<Role> roles = Set.of(temp);
+		adminUser.setRoles(roles);
+		userService.createUser(adminUser);
 		
 		//adding drones to database...
 		
