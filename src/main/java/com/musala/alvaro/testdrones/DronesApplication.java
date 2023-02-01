@@ -3,8 +3,16 @@ package com.musala.alvaro.testdrones;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.core.appender.db.jdbc.ColumnConfig;
+import org.apache.logging.log4j.core.appender.db.jdbc.ConnectionSource;
+import org.apache.logging.log4j.core.appender.db.jdbc.DriverManagerConnectionSource;
+import org.apache.logging.log4j.core.appender.db.jdbc.JdbcAppender;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -29,6 +37,13 @@ import com.musala.alvaro.testdrones.service.IUserService;
 @SpringBootApplication
 public class DronesApplication {
 
+	@Value("${spring.datasource.url}")
+	private String url;
+	@Value("${spring.datasource.username}")
+	private String username;
+	@Value("${spring.datasource.password}")
+	private String password;
+	
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
@@ -111,6 +126,65 @@ public class DronesApplication {
 		
 		System.out.println("DATABASE LOADED!!!");
 		
+		loadLogAddapter();
+		
+		
+	}
+	
+	private void loadLogAddapter() {
+		ColumnConfig[] columnConfigs = new ColumnConfig[6];
+        columnConfigs[0] = ColumnConfig.newBuilder()
+                .setName("\"logger\"")
+                .setPattern("%logger")
+                .setUnicode(false)
+                .build();
+        columnConfigs[1] = ColumnConfig.newBuilder()
+                .setName("\"level\"")
+                .setPattern("%level")
+                .setUnicode(false)
+                .build();
+        columnConfigs[2] = ColumnConfig.newBuilder()
+                .setName("\"message\"")
+                .setPattern("%message")
+                .setUnicode(false)
+                .build();
+        columnConfigs[3] = ColumnConfig.newBuilder()
+                .setName("\"exception\"")
+                .setPattern("%ex{full}")
+                .setUnicode(false)
+                .build();
+        columnConfigs[4] = ColumnConfig.newBuilder()
+                .setName("\"date\"")
+                .setPattern("%d{yyyy-MM-dd HH:mm:ss.SSS}")
+                .setUnicode(false)
+                .build();
+        columnConfigs[5] = ColumnConfig.newBuilder()
+                .setName("\"id\"")
+                .setPattern("%u")
+                .setUnicode(false)
+                .build();
+
+
+        ConnectionSource connectionSource = DriverManagerConnectionSource.newBuilder()
+                .setDriverClassName("org.h2.Driver")
+                .setConnectionString(url)
+                .setUserName(username.toCharArray())
+                .setPassword(password.toCharArray())
+                .build();
+        
+        JdbcAppender appender = JdbcAppender.newBuilder()
+                .setTableName("\"logger\"")
+                .setConnectionSource(connectionSource)
+                .setName("dblog")
+                .setIgnoreExceptions(false)
+                .setBufferSize(1)
+                .setColumnConfigs(columnConfigs)
+                .build();
+
+        appender.start();
+        Logger logger = (Logger) LogManager.getLogger("com");
+        logger.addAppender(appender);
+        
 	}
 	
 }
