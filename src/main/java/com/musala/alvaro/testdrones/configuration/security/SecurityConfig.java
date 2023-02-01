@@ -63,10 +63,9 @@ class SecurityConfig {
         .antMatchers("/auth/**").permitAll()
         .antMatchers("/v3/api-docs/**").permitAll()
         .antMatchers("/h2-console/**").permitAll()
-        //.antMatchers("/**").permitAll()
         .anyRequest().authenticated();
 		
-		http.headers().frameOptions().disable();//for h2 database
+		http.headers().frameOptions().disable();//for h2 database console
 	    http.authenticationProvider(authenticationProvider());
 	    http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 	    

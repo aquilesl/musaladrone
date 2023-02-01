@@ -8,6 +8,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,6 +56,7 @@ public class FleetController {
 //	- registering a drone;
 	
 	@PostMapping("/register-drone")
+	@PreAuthorize("hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
     public ResponseEntity<DroneDTO> registerDrone(@Valid @RequestBody DroneDTO drone) {
 
             Drone droneRequest = modelMapper.map(drone, Drone.class); 
@@ -67,6 +69,7 @@ public class FleetController {
 //	- loading a drone with medication items;
 	
 	@PostMapping("/load-drone")
+	@PreAuthorize("hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
     public ResponseEntity<String> registerOrder(@Valid @RequestBody OrderDTO order) throws NotAvailableDroneException, LowBatteryException, NoMedicineToLoadException, WeightLimitException {
 		
 			
@@ -120,6 +123,7 @@ public class FleetController {
 //	- checking loaded medication items for a given drone;
 	
 	@GetMapping("/drone-cargo/{id}")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
     public ResponseEntity<OrderDTO> showCargo(@PathVariable("id") long droneId){
 		
 		Order order = orderService.findFirstByDroneIdAndDroneState(droneId, DroneState.Loaded);
@@ -130,6 +134,7 @@ public class FleetController {
 //	- checking available drones for loading;
 	
 	@GetMapping("/available-drones")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	public ResponseEntity<List<DroneDTO>> getAvailableDrones(){
 		List<Drone> drones = droneService.findByState(DroneState.Idle);
 		
@@ -146,6 +151,7 @@ public class FleetController {
 //	- check drone battery level for a given drone;
 
 	@GetMapping("/drone-battery-level/{id}")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	public ResponseEntity<Integer> getCheckBatteryLevel(@PathVariable("id") long droneId){
 		
 		Drone drone = droneService.getDroneById(droneId);
@@ -154,6 +160,7 @@ public class FleetController {
 	}
 	
 	@GetMapping("battery-check-log")
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	public ResponseEntity<List<BatteryCheckLogDTO>> getBatteryCheckLog(){
 
 			List<BatteryCheckLogDTO> log =  battService.getAllBatteryCheckLog().stream()
