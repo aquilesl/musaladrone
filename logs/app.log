@@ -1,0 +1,273 @@
+02-02-2023 10:26:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:26:30
+02-02-2023 10:26:30.629 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:26:30.630 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:26:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:26:40
+02-02-2023 10:26:50.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:26:50
+02-02-2023 10:27:00.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:00
+02-02-2023 10:27:00.632 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:27:00.633 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:27:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:10
+02-02-2023 10:27:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:20
+02-02-2023 10:27:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:30
+02-02-2023 10:27:30.636 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:27:30.637 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:27:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:40
+02-02-2023 10:27:50.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:27:50
+02-02-2023 10:28:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:00
+02-02-2023 10:28:00.639 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:28:00.640 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:28:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:10
+02-02-2023 10:28:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:20
+02-02-2023 10:28:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:30
+02-02-2023 10:28:30.642 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:28:30.643 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:28:39.987 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11388: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:28:39.987 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11727: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:28:39.989 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:28:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:40
+02-02-2023 10:28:48.289 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11398: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:28:48.289 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11732: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:28:48.291 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:28:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:28:50
+02-02-2023 10:29:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:00
+02-02-2023 10:29:00.646 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:29:00.647 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:29:09.130 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11410: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:29:09.130 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11740: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:29:09.132 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:29:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:10
+02-02-2023 10:29:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:20
+02-02-2023 10:29:29.412 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11405: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:29:29.412 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11746: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:29:29.414 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:29:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:30
+02-02-2023 10:29:30.649 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:29:30.651 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:29:40.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:40
+02-02-2023 10:29:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:29:50
+02-02-2023 10:29:54.428 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11420: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:29:54.428 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11755: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:29:54.430 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:00
+02-02-2023 10:30:00.654 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:30:00.655 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:00.661 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11431: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:30:00.661 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11762: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:30:00.662 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:09.827 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11424: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:30:09.827 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11766: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:30:09.829 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:10
+02-02-2023 10:30:20.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:20
+02-02-2023 10:30:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:30
+02-02-2023 10:30:30.640 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11436: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:30:30.640 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11773: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:30:30.641 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:30.657 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:30:30.658 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:30:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:40
+02-02-2023 10:30:50.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:30:50
+02-02-2023 10:30:53.960 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11450: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:30:53.960 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11781: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:30:53.963 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:31:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:00
+02-02-2023 10:31:00.662 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:31:00.663 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:31:02.301 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11444: url=jdbc:h2:mem:musala user=SA: (connection has passed maxLifetime)
+02-02-2023 10:31:02.301 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11788: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:31:02.304 DEBUG c.z.h.p.HikariPool [musala connection closer] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:31:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:10
+02-02-2023 10:31:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:20
+02-02-2023 10:31:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:30
+02-02-2023 10:31:30.666 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:31:30.667 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:31:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:40
+02-02-2023 10:31:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:31:50
+02-02-2023 10:32:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:00
+02-02-2023 10:32:00.669 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:32:00.670 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:32:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:10
+02-02-2023 10:32:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:20
+02-02-2023 10:32:30.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:30
+02-02-2023 10:32:30.673 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:32:30.674 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:32:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:40
+02-02-2023 10:32:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:32:50
+02-02-2023 10:33:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:00
+02-02-2023 10:33:00.676 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:33:00.677 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:33:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:10
+02-02-2023 10:33:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:20
+02-02-2023 10:33:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:30
+02-02-2023 10:33:30.681 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:33:30.682 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:33:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:40
+02-02-2023 10:33:50.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:33:50
+02-02-2023 10:34:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:00
+02-02-2023 10:34:00.685 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:34:00.686 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:34:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:10
+02-02-2023 10:34:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:20
+02-02-2023 10:34:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:30
+02-02-2023 10:34:30.689 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:34:30.691 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:34:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:40
+02-02-2023 10:34:50.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:34:50
+02-02-2023 10:35:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:00
+02-02-2023 10:35:00.693 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:35:00.694 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:35:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:10
+02-02-2023 10:35:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:20
+02-02-2023 10:35:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:30
+02-02-2023 10:35:30.697 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:35:30.698 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:35:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:40
+02-02-2023 10:35:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:35:50
+02-02-2023 10:36:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:00
+02-02-2023 10:36:00.700 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:36:00.701 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:36:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:10
+02-02-2023 10:36:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:20
+02-02-2023 10:36:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:30
+02-02-2023 10:36:30.703 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:36:30.704 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:36:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:40
+02-02-2023 10:36:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:36:50
+02-02-2023 10:37:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:00
+02-02-2023 10:37:00.707 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:37:00.708 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:37:10.000 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:10
+02-02-2023 10:37:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:20
+02-02-2023 10:37:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:30
+02-02-2023 10:37:30.710 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:37:30.711 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:37:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:40
+02-02-2023 10:37:50.003 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:37:50
+02-02-2023 10:38:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:00
+02-02-2023 10:38:00.713 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:38:00.714 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:38:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:10
+02-02-2023 10:38:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:20
+02-02-2023 10:38:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:30
+02-02-2023 10:38:30.718 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:38:30.719 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:38:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:40
+02-02-2023 10:38:50.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:38:50
+02-02-2023 10:39:00.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:00
+02-02-2023 10:39:00.721 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:39:00.722 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:39:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:10
+02-02-2023 10:39:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:20
+02-02-2023 10:39:30.003 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:30
+02-02-2023 10:39:30.724 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:39:30.725 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:39:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:40
+02-02-2023 10:39:50.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:39:50
+02-02-2023 10:40:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:00
+02-02-2023 10:40:00.728 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:40:00.729 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:40:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:10
+02-02-2023 10:40:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:20
+02-02-2023 10:40:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:30
+02-02-2023 10:40:30.732 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:40:30.733 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:40:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:40
+02-02-2023 10:40:50.003 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:40:50
+02-02-2023 10:41:00.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:00
+02-02-2023 10:41:00.737 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:41:00.738 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:41:10.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:10
+02-02-2023 10:41:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:20
+02-02-2023 10:41:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:30
+02-02-2023 10:41:30.742 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:41:30.743 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:41:40.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:40
+02-02-2023 10:41:50.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:41:50
+02-02-2023 10:42:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:00
+02-02-2023 10:42:00.746 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:42:00.747 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:42:10.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:10
+02-02-2023 10:42:20.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:20
+02-02-2023 10:42:30.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:30
+02-02-2023 10:42:30.749 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:42:30.750 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:42:40.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:40
+02-02-2023 10:42:50.003 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:42:50
+02-02-2023 10:43:00.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:43:00
+02-02-2023 10:43:00.753 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:43:00.754 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:43:10.003 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:43:10
+02-02-2023 10:43:20.002 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:43:20
+02-02-2023 10:43:30.001 INFO c.m.a.t.s.BatteryCheckScheduled [scheduling-1] Starting Battery Levels check at - 10:43:30
+02-02-2023 10:43:30.755 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Pool stats (total=10, active=0, idle=10, waiting=0)
+02-02-2023 10:43:30.760 DEBUG c.z.h.p.HikariPool [musala housekeeper] musala - Fill pool skipped, pool is at sufficient level.
+02-02-2023 10:43:38.834 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(1059)-127.0.0.1] Application shutdown requested.
+02-02-2023 10:43:38.834 DEBUG o.s.b.a.ApplicationAvailabilityBean [RMI TCP Connection(1059)-127.0.0.1] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+02-02-2023 10:43:38.836 DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [RMI TCP Connection(1059)-127.0.0.1] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5fa66055, started on Wed Feb 01 17:12:49 GMT-05:00 2023
+02-02-2023 10:43:38.877 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Beans' from the JMX domain
+02-02-2023 10:43:38.877 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Caches' from the JMX domain
+02-02-2023 10:43:38.877 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Health' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Info' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Conditions' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Configprops' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Env' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Loggers' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Threaddump' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Metrics' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Scheduledtasks' from the JMX domain
+02-02-2023 10:43:38.878 DEBUG o.s.b.a.e.j.JmxEndpointExporter [RMI TCP Connection(1059)-127.0.0.1] Unregister endpoint with ObjectName 'org.springframework.boot:type=Endpoint,name=Mappings' from the JMX domain
+02-02-2023 10:43:38.885 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11727: url=jdbc:h2:mem:musala user=SA: (connection is dead)
+02-02-2023 10:43:39.081 DEBUG c.z.h.p.HikariPool [musala connection adder] musala - Added connection conn11917: url=jdbc:h2:mem:musala user=SA
+02-02-2023 10:43:39.283 INFO c.z.h.HikariDataSource [RMI TCP Connection(1059)-127.0.0.1] musala - Shutdown initiated...
+02-02-2023 10:43:44.090 DEBUG c.z.h.p.PoolBase [musala connection closer] musala - Closing connection conn11727: url=jdbc:h2:mem:musala user=SA failed
+org.apache.logging.log4j.core.appender.AppenderLoggingException: Error sending to JdbcManager{name=dblog, bufferSize=1, tableName="logger", columnConfigs=[{ name="logger", layout=%logger, literal=null, timestamp=false }, { name="level", layout=%level, literal=null, timestamp=false }, { name="message", layout=%message, literal=null, timestamp=false }, { name="exception", layout=%ex{full}, literal=null, timestamp=false }, { name="date", layout=%d{yyyy-MM-dd HH:mm:ss.SSS}, literal=null, timestamp=false }, { name="id", layout=%u, literal=null, timestamp=false }], columnMappings=null} for FactoryData [connectionSource=jdbc:h2:mem:musala, tableName="logger", columnConfigs=[{ name="logger", layout=%logger, literal=null, timestamp=false }, { name="level", layout=%level, literal=null, timestamp=false }, { name="message", layout=%message, literal=null, timestamp=false }, { name="exception", layout=%ex{full}, literal=null, timestamp=false }, { name="date", layout=%d{yyyy-MM-dd HH:mm:ss.SSS}, literal=null, timestamp=false }, { name="id", layout=%u, literal=null, timestamp=false }], columnMappings=null, immediateFail=false, retry=true, reconnectIntervalMillis=5000, truncateStrings=true] [columnConfigs=[{ name="logger", layout=%logger, literal=null, timestamp=false }, { name="level", layout=%level, literal=null, timestamp=false }, { name="message", layout=%message, literal=null, timestamp=false }, { name="exception", layout=%ex{full}, literal=null, timestamp=false }, { name="date", layout=%d{yyyy-MM-dd HH:mm:ss.SSS}, literal=null, timestamp=false }, { name="id", layout=%u, literal=null, timestamp=false }], sqlStatement=insert into "logger" ("logger","level","message","exception","date","id") values (?,?,?,?,?,?), factoryData=FactoryData [connectionSource=jdbc:h2:mem:musala, tableName="logger", columnConfigs=[{ name="logger", layout=%logger, literal=null, timestamp=false }, { name="level", layout=%level, literal=null, timestamp=false }, { name="message", layout=%message, literal=null, timestamp=false }, { name="exception", layout=%ex{full}, literal=null, timestamp=false }, { name="date", layout=%d{yyyy-MM-dd HH:mm:ss.SSS}, literal=null, timestamp=false }, { name="id", layout=%u, literal=null, timestamp=false }], columnMappings=null, immediateFail=false, retry=true, reconnectIntervalMillis=5000, truncateStrings=true], connection=conn11919: url=jdbc:h2:mem:musala user=SA, statement=null, reconnector=Reconnector [latch=java.util.concurrent.CountDownLatch@6c66fd22[Count = 0], shutdown=false], isBatchSupported=true, columnMetaData={EXCEPTION=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=exception, nameKey=EXCEPTION, label=exception, displaySize=255, type=12, typeName=CHARACTER VARYING, className=java.lang.String, precision=255, scale=0, isStringType=true], MESSAGE=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=message, nameKey=MESSAGE, label=message, displaySize=255, type=12, typeName=CHARACTER VARYING, className=java.lang.String, precision=255, scale=0, isStringType=true], DATE=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=date, nameKey=DATE, label=date, displaySize=26, type=93, typeName=TIMESTAMP, className=java.sql.Timestamp, precision=26, scale=6, isStringType=false], LOGGER=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=logger, nameKey=LOGGER, label=logger, displaySize=255, type=12, typeName=CHARACTER VARYING, className=java.lang.String, precision=255, scale=0, isStringType=true], LEVEL=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=level, nameKey=LEVEL, label=level, displaySize=255, type=12, typeName=CHARACTER VARYING, className=java.lang.String, precision=255, scale=0, isStringType=true], ID=ColumnMetaData [schemaName=PUBLIC, catalogName=MUSALA, tableName=logger, name=id, nameKey=ID, label=id, displaySize=255, type=12, typeName=CHARACTER VARYING, className=java.lang.String, precision=255, scale=0, isStringType=true]}]
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.reconnectOn(JdbcDatabaseManager.java:716) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndStart(JdbcDatabaseManager.java:615) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseManager.flush(AbstractDatabaseManager.java:186) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseManager.buffer(AbstractDatabaseManager.java:159) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseManager.write(AbstractDatabaseManager.java:296) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.AbstractDatabaseAppender.append(AbstractDatabaseAppender.java:110) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:675) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:633) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:616) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:552) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205) ~[log4j-api-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159) ~[log4j-api-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142) ~[log4j-api-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2028) ~[log4j-api-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1891) ~[log4j-api-2.17.2.jar:2.17.2]
+	at org.apache.logging.slf4j.Log4jLogger.debug(Log4jLogger.java:134) ~[log4j-slf4j-impl-2.17.2.jar:2.17.2]
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:134) ~[HikariCP-4.0.3.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.lambda$closeConnection$1(HikariPool.java:451) ~[HikariCP-4.0.3.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[?:?]
+	at java.lang.Thread.run(Thread.java:832) ~[?:?]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "logger" not found (this database is empty); SQL statement:
+insert into "logger" ("logger","level","message","exception","date","id") values (?,?,?,?,?,?) [42104-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8385) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8328) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parseInsert(Parser.java:1632) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parsePrepared(Parser.java:814) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.214.jar:2.1.214]
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndPrepare(JdbcDatabaseManager.java:601) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.appender.db.jdbc.JdbcDatabaseManager.connectAndStart(JdbcDatabaseManager.java:613) ~[log4j-core-2.17.2.jar:2.17.2]
+	... 25 more
