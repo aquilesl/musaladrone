@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,7 @@ import com.musala.alvaro.testdrones.model.BatteryCheckLog;
 import com.musala.alvaro.testdrones.model.Drone;
 import com.musala.alvaro.testdrones.model.Medication;
 import com.musala.alvaro.testdrones.model.Order;
+import com.musala.alvaro.testdrones.model.DTO.BatteryCheckLogDTO;
 import com.musala.alvaro.testdrones.model.DTO.DroneDTO;
 import com.musala.alvaro.testdrones.model.DTO.OrderDTO;
 import com.musala.alvaro.testdrones.model.enums.DroneModel;
@@ -102,10 +105,14 @@ class FleetControllerTest {
 		Mockito.when(orderService.getOrderById(3L)).thenReturn(o3);
 		Mockito.when(orderService.getAllOrders()).thenReturn(orderlist);
 		
-		//orderService.findFirstByDroneIdAndDroneState(id, DroneState.Loaded);
+		//orderService.findFirstByDroneIdAndDroneState
 		Mockito.when(orderService.findFirstByDroneIdAndDroneState(1L, DroneState.Loaded)).thenReturn(o1);
 		Mockito.when(orderService.findFirstByDroneIdAndDroneState(2L, DroneState.Loaded)).thenReturn(o2);
 		Mockito.when(orderService.findFirstByDroneIdAndDroneState(3L, DroneState.Loaded)).thenReturn(o3);
+		//droneService.findByState
+		Mockito.when(droneService.findByState(DroneState.Idle)).thenReturn(new ArrayList<Drone>(Arrays.asList(new Drone[]{d4})));
+		//battService.getAllBatteryCheckLog()
+		Mockito.when(battService.getAllBatteryCheckLog()).thenReturn(listLog);
 	}
 	
 	@Test
@@ -113,7 +120,7 @@ class FleetControllerTest {
 	void checkBatteryLevelTest() {
 		int result = fleetBusiness.getCheckBatteryLevel(1L);
 		int expected = 100;
-		 assertEquals(expected,result, "Testing Drone # 1 Battery Level Expected = "+expected+" and result = "+result);
+		 assertEquals(expected,result, "Testing checkBatteryLevel() Method");
 	}
 	
 
@@ -122,6 +129,24 @@ class FleetControllerTest {
 		OrderDTO result = fleetBusiness.showCargo(1L);
 		OrderDTO expected = modelMapper.map(o1, OrderDTO.class);
 		assertEquals(expected,result,"Testing showCargo() Method");
+	}
+	
+	@Test
+	void getAvailableDrones() {
+		List<DroneDTO> result = fleetBusiness.getAvailableDrones();
+		List<DroneDTO> expected = (new ArrayList<Drone>(Arrays.asList(new Drone[]{d4}))).stream()
+				.map(drone -> modelMapper.map(drone, DroneDTO.class))
+				.collect(Collectors.toList());
+		assertEquals(expected,result,"Testing getAvailableDrones() Method");
+	}
+	
+	@Test
+	void getBatteryCheckLog() {
+		List<BatteryCheckLogDTO> result = fleetBusiness.getBatteryCheckLog();
+		List<BatteryCheckLogDTO> expected = listLog.stream()
+				.map(checkLog -> modelMapper.map(checkLog, BatteryCheckLogDTO.class))
+				.collect(Collectors.toList());
+		assertEquals(expected,result,"Testing getBatteryCheckLog() Method");
 	}
 
 }
