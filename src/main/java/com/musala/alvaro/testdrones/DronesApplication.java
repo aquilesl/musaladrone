@@ -50,7 +50,7 @@ public class DronesApplication {
 	}
 	
 	@Bean
-	ApplicationRunner pupulateDataBase(IDroneService droneservice,
+	ApplicationRunner populateDataBase(IDroneService droneservice,
 						   IMedicationService medicationservice,
 						   IOrderService orderService,
 						   IUserService userService,
