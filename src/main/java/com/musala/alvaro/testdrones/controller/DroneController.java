@@ -1,9 +1,7 @@
 package com.musala.alvaro.testdrones.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.validation.Valid;
-import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,42 +13,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.musala.alvaro.testdrones.model.Drone;
+import com.musala.alvaro.testdrones.business.IDroneBusiness;
 import com.musala.alvaro.testdrones.model.DTO.DroneDTO;
-import com.musala.alvaro.testdrones.model.enums.DroneState;
-import com.musala.alvaro.testdrones.service.IDroneService;
 
 @RestController
 @RequestMapping("/drones")
 public class DroneController {
 
-	private IDroneService droneService;
-	
-	private ModelMapper modelMapper;
+	IDroneBusiness droneBusiness;
 
 	@Autowired
-	public DroneController(IDroneService droneService, ModelMapper modelMapper) {
-		this.droneService = droneService;
-		this.modelMapper = modelMapper;
+	public DroneController(IDroneBusiness droneBusiness) {
+		this.droneBusiness = droneBusiness;
 	}
 
 	@GetMapping("/")
 	public ResponseEntity<List<DroneDTO>> getAllDrones() {
 
-			List<DroneDTO> drones =  droneService.getAllDrones().stream().map(drone -> modelMapper.map(drone, DroneDTO.class))
-					.collect(Collectors.toList());
-
-            if (drones.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(drones, HttpStatus.OK);
+            return new ResponseEntity<>(droneBusiness.getAllDrones(), HttpStatus.OK);
 
 	}
 	
 	@GetMapping("/{id}")
     public ResponseEntity<DroneDTO> getDroneById(@PathVariable("id") long id) {
 
-       return new ResponseEntity<>(modelMapper.map(droneService.getDroneById(id), DroneDTO.class), HttpStatus.OK);
+       return new ResponseEntity<>(droneBusiness.getDroneById(id), HttpStatus.OK);
 
     }
 	
@@ -58,25 +45,23 @@ public class DroneController {
 	@PostMapping("/")
     public ResponseEntity<DroneDTO> addDrone(@Valid @RequestBody DroneDTO drone) {
 
-            Drone droneRequest = modelMapper.map(drone, Drone.class); 
-            droneRequest.setState(DroneState.Idle);
-            Drone newDrone = droneService.createDrone(droneRequest);
-            return new ResponseEntity<>(modelMapper.map(newDrone, DroneDTO.class), HttpStatus.CREATED);
+            DroneDTO result = droneBusiness.addDrone(drone);
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
 
     }
 	
 	@PutMapping("/{id}")
     public ResponseEntity<DroneDTO> updateDrone(@PathVariable("id") long id, @Valid @RequestBody DroneDTO drone) {
 
-        	Drone newDrone = droneService.updateDrone(id,modelMapper.map(drone, Drone.class));
-            return new ResponseEntity<>(modelMapper.map(newDrone, DroneDTO.class), HttpStatus.OK);
+        	DroneDTO newDrone = droneBusiness.updateDrone(id, drone);
+            return new ResponseEntity<>(newDrone, HttpStatus.OK);
 
     }
 	
 	@DeleteMapping("/{id}")
     public ResponseEntity<String> deleteDrone(@PathVariable("id") long id) {
 
-            droneService.deleteDrone(id);
+            droneBusiness.deleteDrone(id);
             return new ResponseEntity<>("Drone deleted", HttpStatus.OK);
 
     }
